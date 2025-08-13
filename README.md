@@ -133,6 +133,7 @@ Here's a [cheap Heating Plate on AliExpress](https://it.aliexpress.com/item/1005
 | Manufacturer Code | Description | Designer | Notes | Replaceable |
 | ----------------- | ----------- | -------- | ----- | ----------- |
 | MCP2025-330E/MD | IC TRANSCEIVER HALF 1/1 8DFN | IC1 | For both designs | N |
+| ^ this part is end of life and harder to find. The best drop in replacement seems to be the TJA1029TK/3V3J, but I've not tried it yet | IC TRANSCEIVER HALF 1/1 8DFN | IC1 | For both designs | N |
 | TPS82140SILR | DC DC CONVERTER 0.9-6V | U1 | For both designs | N |
 | C2012X5R1C106M085AC | Capacitor 10UF 16V X5R 0805 | C1 | For both designs | Y |
 | CL21A226MOQNNNE | Capacitor 22UF 16V X5R 0805 | C2 | For both designs | Y |
