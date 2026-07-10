@@ -27,13 +27,16 @@ There is also a new version, [AtomS3 Lite](https://shop.m5stack.com/products/ato
 
 ### Directory Tree:
 * Fuji_HK_V1_Rev2.0.zip
+  
+* **Fuji_HK_V1_Rev2.5.zip**
 
 * Fuji_HK_V2_Rev1.5.zip
 
 When the JLCPCB site prompts you to upload Gerber files, directly upload the "Fuji_HK_V***X***_Rev***X.X***.zip" archive you have chosen.
 
-There are two versions of the circuit:
+There are three versions of the circuit:
 * **V1_Rev2.0 ->** powers the Atom @3.3V on the appropriate pin
+* **V1_Rev2.5 ->** powers the Atom @3.3V on the appropriate pin and has new LIN Transciever
 * **V2_Rev1.5 ->** powers the Atom @5V on the appropriate pin
 	
 Choose the one you prefer, there is no difference in the final operation.
@@ -133,7 +136,7 @@ Here's a [cheap Heating Plate on AliExpress](https://it.aliexpress.com/item/1005
 | Manufacturer Code | Description | Designer | Notes | Replaceable |
 | ----------------- | ----------- | -------- | ----- | ----------- |
 | MCP2025-330E/MD | IC TRANSCEIVER HALF 1/1 8DFN | IC1 | For both designs | N |
-| ^ this part is end of life and harder to find. The best drop in replacement seems to be the TJA1029TK/3V3J, but I've not tried it yet | IC TRANSCEIVER HALF 1/1 8DFN | IC1 | For both designs | N |
+| ^ this part is EOL and hard to find. The best drop in replacement seems to be the TJA1028TK/3V3J, but I've not tried it yet | IC TRANSCEIVER HVSON8 | IC1 | For 3.3V | N |
 | TPS82140SILR | DC DC CONVERTER 0.9-6V | U1 | For both designs | N |
 | C2012X5R1C106M085AC | Capacitor 10UF 16V X5R 0805 | C1 | For both designs | Y |
 | CL21A226MOQNNNE | Capacitor 22UF 16V X5R 0805 | C2 | For both designs | Y |
