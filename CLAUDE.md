@@ -112,8 +112,9 @@ enable to 3.3V.
 
 ### Phase 1 — protoboard (~AU$45), this IS a valid finished product
 
-Placement map, verified TLE7259-3GE pinout, and point-to-point wire list:
-[`docs/phase1-protoboard-layout.md`](docs/phase1-protoboard-layout.md).
+Placement map, verified TLE7259-3GE pinout, and grid wire list — now on
+**stripboard** rather than plain perfboard, so there are copper strips to
+cut (see the doc for exactly where): [`docs/phase1-protoboard-layout.md`](docs/phase1-protoboard-layout.md).
 
 | Item | Qty | Source | ~AUD |
 |---|---|---|---|
@@ -122,7 +123,7 @@ Placement map, verified TLE7259-3GE pinout, and point-to-point wire list:
 | SOIC-8 → DIP-8 adapter | 5pk | AliExpress | 3 |
 | Buck module 12V→5V (mini-360 / MP1584) | 2 | AliExpress / Jaycar | 3 |
 | JST ZH 1.5mm 3-pin + pigtail kit | 1 | AliExpress | 5 |
-| Perfboard 5×7cm | 5pk | AliExpress | 3 |
+| Stripboard (Veroboard) 5×7cm, cut to ~50×35mm | 5pk | AliExpress / Jaycar | 3 |
 | 100µF 25V electrolytic | few | Jaycar | 2 |
 | 100nF ceramics, 10k resistors | few | Jaycar | 2 |
 | Headers, hookup wire | — | on hand | 3 |
@@ -149,7 +150,9 @@ Steps:
 1. Solder transceiver to DIP adapter. Check for bridges with a loupe.
 2. **Set buck output to 5.0V before connecting the XIAO.** These ship with
    the trimmer anywhere.
-3. Assemble on perfboard, XIAO on female headers.
+3. Assemble on stripboard per the grid layout doc (cut the strips first,
+   before placing parts — see `docs/phase1-protoboard-layout.md`), XIAO on
+   female headers.
 4. Flash and verify over USB with nothing connected to the aircon. Cold
    ESP-IDF builds take ~20 min.
 5. Add the Fujitsu component, reflash.

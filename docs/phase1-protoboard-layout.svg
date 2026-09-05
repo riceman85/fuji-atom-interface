@@ -1,175 +1,171 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 660" font-family="Helvetica, Arial, sans-serif">
-  <rect x="0" y="0" width="980" height="660" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 760" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <pattern id="holes" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="15" cy="15" r="2.1" fill="#b8ad8f"/>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="860" height="760" fill="#ffffff"/>
 
-  <!-- Title -->
-  <text x="20" y="28" font-size="20" font-weight="bold" fill="#111">Phase 1 protoboard — placement map</text>
-  <text x="20" y="48" font-size="13" fill="#555">5&#215;7 cm perfboard, 0.1&quot; pitch &#8226; landscape &#8226; not to exact scale &#8226; USB-C accessible without disassembly</text>
+  <text x="20" y="26" font-size="19" font-weight="bold" fill="#111">Phase 1 — compact stripboard layout (v2)</text>
+  <text x="20" y="45" font-size="12.5" fill="#555">Copper strips run VERTICALLY (each column = one continuous strip until cut) &#8226; board cut to ~50 &#215; 35mm &#8226; view from the component (top) side</text>
 
-  <!-- Board outline -->
-  <rect x="70" y="80" width="760" height="500" rx="10" fill="#f7f4ec" stroke="#8a7f66" stroke-width="3"/>
+  <!-- board -->
+  <rect x="75" y="90" width="600" height="365" fill="url(#holes)" stroke="#8a7f66" stroke-width="3" rx="6"/>
   <!-- mounting holes -->
-  <circle cx="95" cy="105" r="6" fill="none" stroke="#8a7f66" stroke-width="2"/>
-  <circle cx="805" cy="105" r="6" fill="none" stroke="#8a7f66" stroke-width="2"/>
-  <circle cx="95" cy="555" r="6" fill="none" stroke="#8a7f66" stroke-width="2"/>
-  <circle cx="805" cy="555" r="6" fill="none" stroke="#8a7f66" stroke-width="2"/>
+  <circle cx="90" cy="105" r="6" fill="none" stroke="#8a7f66" stroke-width="2"/>
+  <circle cx="660" cy="105" r="6" fill="none" stroke="#8a7f66" stroke-width="2"/>
+  <circle cx="90" cy="440" r="6" fill="none" stroke="#8a7f66" stroke-width="2"/>
+  <circle cx="660" cy="440" r="6" fill="none" stroke="#8a7f66" stroke-width="2"/>
 
-  <!-- ===================== J3 bus connector ===================== -->
-  <g>
-    <rect x="30" y="270" width="55" height="60" fill="#ddd" stroke="#333" stroke-width="2"/>
-    <text x="57" y="255" font-size="13" text-anchor="middle" font-weight="bold">J3</text>
-    <text x="57" y="345" font-size="11" text-anchor="middle">3-pin JST-ZH</text>
-    <text x="57" y="358" font-size="11" text-anchor="middle">to aircon bus</text>
-    <circle cx="45" cy="285" r="4" fill="#c0392b"/>
-    <circle cx="45" cy="300" r="4" fill="#ecf0f1" stroke="#333"/>
-    <circle cx="45" cy="315" r="4" fill="#111"/>
-    <!-- pigtail leads -->
-    <line x1="10" y1="285" x2="30" y2="285" stroke="#c0392b" stroke-width="4"/>
-    <line x1="10" y1="300" x2="30" y2="300" stroke="#bdc3c7" stroke-width="4"/>
-    <line x1="10" y1="315" x2="30" y2="315" stroke="#111" stroke-width="4"/>
-    <text x="8" y="280" font-size="10" text-anchor="end" fill="#c0392b">RED 12V</text>
-    <text x="8" y="304" font-size="10" text-anchor="end" fill="#7f8c8d">WHITE LIN</text>
-    <text x="8" y="330" font-size="10" text-anchor="end" fill="#111">BLACK GND</text>
+  <!-- column labels (1-20) -->
+  <g font-size="10" fill="#777" text-anchor="middle">
+    <text x="90" y="78">1</text><text x="120" y="78">2</text><text x="150" y="78">3</text><text x="180" y="78">4</text>
+    <text x="210" y="78">5</text><text x="240" y="78">6</text><text x="270" y="78">7</text><text x="300" y="78">8</text>
+    <text x="330" y="78">9</text><text x="360" y="78">10</text><text x="390" y="78">11</text><text x="420" y="78">12</text>
+    <text x="450" y="78">13</text><text x="480" y="78">14</text><text x="510" y="78">15</text><text x="540" y="78">16</text>
+    <text x="570" y="78">17</text><text x="600" y="78">18</text><text x="630" y="78">19</text><text x="660" y="78">20</text>
+  </g>
+  <!-- row labels (1-13) -->
+  <g font-size="10" fill="#777" text-anchor="end">
+    <text x="68" y="93">1</text><text x="68" y="123">2</text><text x="68" y="153">3</text><text x="68" y="183">4</text>
+    <text x="68" y="213">5</text><text x="68" y="243">6</text><text x="68" y="273">7</text><text x="68" y="303">8</text>
+    <text x="68" y="333">9</text><text x="68" y="363">10</text><text x="68" y="393">11</text><text x="68" y="423">12</text>
+    <text x="68" y="453">13</text>
   </g>
 
-  <!-- ===================== Bulk cap C1 ===================== -->
-  <g>
-    <circle cx="150" cy="300" r="26" fill="#eee" stroke="#333" stroke-width="2"/>
-    <text x="150" y="296" font-size="11" text-anchor="middle" font-weight="bold">C1</text>
-    <text x="150" y="309" font-size="10" text-anchor="middle">100&#181;F</text>
-    <text x="150" y="342" font-size="10" text-anchor="middle">25V bulk</text>
-    <text x="150" y="356" font-size="10" text-anchor="middle">(at bus entry)</text>
-    <text x="132" y="296" font-size="12" fill="#c0392b">+</text>
+  <!-- Rails: col1 = GND, col2 = 12V, full height -->
+  <rect x="86" y="94" width="8" height="357" fill="#111" opacity="0.75"/>
+  <rect x="116" y="94" width="8" height="357" fill="#c0392b" opacity="0.75"/>
+  <text x="90" y="470" font-size="11" text-anchor="middle" font-weight="bold" fill="#111">col1 GND rail</text>
+  <text x="120" y="470" font-size="11" text-anchor="middle" font-weight="bold" fill="#c0392b">col2 12V rail</text>
+  <text x="105" y="486" font-size="10" text-anchor="middle" fill="#555">(uncut, full length)</text>
+
+  <!-- ================= THE CUT LINE ================= -->
+  <line x1="150" y1="165" x2="660" y2="165" stroke="#e74c3c" stroke-width="2.5" stroke-dasharray="7,4"/>
+  <text x="405" y="500" font-size="13" font-weight="bold" fill="#c0392b" text-anchor="middle">
+    ONE cut in every strip from column 3 to column 20, between rows 3 &amp; 4 &#8212; leave columns 1 &amp; 2 uncut
+  </text>
+  <!-- cut marks -->
+  <g stroke="#e74c3c" stroke-width="2.5">
+    <line x1="146" y1="161" x2="154" y2="169"/><line x1="146" y1="169" x2="154" y2="161"/>
+    <line x1="176" y1="161" x2="184" y2="169"/><line x1="176" y1="169" x2="184" y2="161"/>
+    <line x1="206" y1="161" x2="214" y2="169"/><line x1="206" y1="169" x2="214" y2="161"/>
+    <line x1="236" y1="161" x2="244" y2="169"/><line x1="236" y1="169" x2="244" y2="161"/>
+    <line x1="266" y1="161" x2="274" y2="169"/><line x1="266" y1="169" x2="274" y2="161"/>
+    <line x1="296" y1="161" x2="304" y2="169"/><line x1="296" y1="169" x2="304" y2="161"/>
+    <line x1="326" y1="161" x2="334" y2="169"/><line x1="326" y1="169" x2="334" y2="161"/>
+    <line x1="356" y1="161" x2="364" y2="169"/><line x1="356" y1="169" x2="364" y2="161"/>
+    <line x1="386" y1="161" x2="394" y2="169"/><line x1="386" y1="169" x2="394" y2="161"/>
+    <line x1="416" y1="161" x2="424" y2="169"/><line x1="416" y1="169" x2="424" y2="161"/>
+    <line x1="446" y1="161" x2="454" y2="169"/><line x1="446" y1="169" x2="454" y2="161"/>
+    <line x1="476" y1="161" x2="484" y2="169"/><line x1="476" y1="169" x2="484" y2="161"/>
+    <line x1="506" y1="161" x2="514" y2="169"/><line x1="506" y1="169" x2="514" y2="161"/>
+    <line x1="536" y1="161" x2="544" y2="169"/><line x1="536" y1="169" x2="544" y2="161"/>
+    <line x1="566" y1="161" x2="574" y2="169"/><line x1="566" y1="169" x2="574" y2="161"/>
+    <line x1="596" y1="161" x2="604" y2="169"/><line x1="596" y1="169" x2="604" y2="161"/>
+    <line x1="626" y1="161" x2="634" y2="169"/><line x1="626" y1="169" x2="634" y2="161"/>
+    <line x1="656" y1="161" x2="664" y2="169"/><line x1="656" y1="169" x2="664" y2="161"/>
   </g>
 
-  <!-- ===================== U1 TLE7259-3GE on DIP-8 adapter ===================== -->
-  <g>
-    <rect x="230" y="200" width="90" height="150" fill="#fff" stroke="#333" stroke-width="2"/>
-    <text x="275" y="188" font-size="13" text-anchor="middle" font-weight="bold">U1  TLE7259-3GE</text>
-    <text x="275" y="365" font-size="10" text-anchor="middle">SOIC-8&#8594;DIP-8 adapter</text>
-    <circle cx="242" cy="212" r="4" fill="#111"/>
-    <!-- pin labels left side: 1-4 top-to-bottom -->
-    <text x="222" y="220" font-size="11" text-anchor="end">1 RxD</text>
-    <text x="222" y="258" font-size="11" text-anchor="end">2 EN</text>
-    <text x="222" y="296" font-size="11" text-anchor="end">3 WK</text>
-    <text x="222" y="334" font-size="11" text-anchor="end">4 TxD</text>
-    <!-- pin labels right side: 8-5 top-to-bottom -->
-    <text x="328" y="220" font-size="11">8 INH</text>
-    <text x="328" y="258" font-size="11">7 VS</text>
-    <text x="328" y="296" font-size="11">6 BUS</text>
-    <text x="328" y="334" font-size="11">5 GND</text>
-    <!-- pin stubs -->
-    <line x1="230" y1="216" x2="210" y2="216" stroke="#333" stroke-width="2"/>
-    <line x1="230" y1="254" x2="210" y2="254" stroke="#333" stroke-width="2"/>
-    <line x1="230" y1="292" x2="210" y2="292" stroke="#333" stroke-width="2"/>
-    <line x1="230" y1="330" x2="210" y2="330" stroke="#333" stroke-width="2"/>
-    <line x1="320" y1="216" x2="340" y2="216" stroke="#333" stroke-width="2"/>
-    <line x1="320" y1="254" x2="340" y2="254" stroke="#333" stroke-width="2"/>
-    <line x1="320" y1="292" x2="340" y2="292" stroke="#333" stroke-width="2"/>
-    <line x1="320" y1="330" x2="340" y2="330" stroke="#333" stroke-width="2"/>
+  <!-- ================= U2 Buck ================= -->
+  <rect x="168" y="103" width="114" height="35" fill="#eef" stroke="#333" stroke-width="1.5"/>
+  <text x="225" y="97" font-size="11" text-anchor="middle" font-weight="bold">U2 buck 12V&#8594;5V</text>
+  <text x="225" y="150" font-size="9" text-anchor="middle" fill="#555">order varies by module &#8212; check silkscreen</text>
+  <g font-size="10" text-anchor="middle">
+    <text x="180" y="118">I+</text><text x="210" y="118">I&#8722;</text><text x="240" y="118">O&#8722;</text><text x="270" y="118">O+</text>
   </g>
 
-  <!-- R_EN, R_WK, C2 -->
-  <g>
-    <rect x="185" y="205" width="14" height="34" fill="#e8d7a0" stroke="#333"/>
-    <text x="192" y="196" font-size="10" text-anchor="middle">R2</text>
-    <text x="192" y="252" font-size="9" text-anchor="middle">10k</text>
-    <text x="192" y="262" font-size="9" text-anchor="middle">EN pull-up</text>
-
-    <rect x="185" y="280" width="14" height="34" fill="#e8d7a0" stroke="#333"/>
-    <text x="192" y="272" font-size="10" text-anchor="middle">R3</text>
-    <text x="192" y="327" font-size="9" text-anchor="middle">10k</text>
-    <text x="192" y="337" font-size="9" text-anchor="middle">WK pull-down</text>
-
-    <rect x="345" y="245" width="30" height="16" fill="#cfe8cf" stroke="#333"/>
-    <text x="360" y="240" font-size="10" text-anchor="middle">C2</text>
-    <text x="360" y="273" font-size="9" text-anchor="middle">100nF</text>
-    <text x="360" y="283" font-size="9" text-anchor="middle">VS&#8596;GND</text>
+  <!-- ================= U1 TLE7259-3GE ================= -->
+  <rect x="318" y="103" width="114" height="120" fill="#fff" stroke="#333" stroke-width="1.5"/>
+  <text x="375" y="97" font-size="11" text-anchor="middle" font-weight="bold">U1 TLE7259-3GE (DIP-8 adapter)</text>
+  <circle cx="330" cy="112" r="3.5" fill="#111"/>
+  <g font-size="10" text-anchor="middle">
+    <text x="330" y="118">Rx</text><text x="360" y="118">EN</text><text x="390" y="118">WK</text><text x="420" y="118">Tx</text>
+    <text x="330" y="216">&#8212;</text><text x="360" y="216">L</text><text x="390" y="216">12V</text><text x="420" y="216">GND</text>
   </g>
+  <text x="330" y="230" font-size="8.5" text-anchor="middle" fill="#888">INH nc</text>
+  <text x="360" y="230" font-size="8.5" text-anchor="middle" fill="#888">BUS</text>
+  <text x="390" y="230" font-size="8.5" text-anchor="middle" fill="#888">VS</text>
+  <text x="420" y="230" font-size="8.5" text-anchor="middle" fill="#888">GND</text>
 
-  <!-- ===================== U2 Buck converter ===================== -->
-  <g>
-    <rect x="420" y="110" width="150" height="90" fill="#eef" stroke="#333" stroke-width="2"/>
-    <text x="495" y="100" font-size="13" text-anchor="middle" font-weight="bold">U2  Buck 12V&#8594;5V</text>
-    <text x="495" y="132" font-size="10" text-anchor="middle">mini-360 / MP1584</text>
-    <circle cx="545" cy="160" r="9" fill="none" stroke="#333" stroke-width="2"/>
-    <line x1="540" y1="155" x2="550" y2="165" stroke="#333" stroke-width="2"/>
-    <text x="545" y="182" font-size="9" text-anchor="middle">trimpot</text>
-    <text x="495" y="192" font-size="10" font-weight="bold" text-anchor="middle" fill="#c0392b">set 5.00V before fitting XIAO</text>
-    <text x="440" y="150" font-size="10">IN+</text>
-    <text x="440" y="165" font-size="10">IN&#8722;</text>
-    <text x="440" y="180" font-size="10">OUT+/&#8722;</text>
+  <!-- passives near U1 -->
+  <rect x="356" y="99" width="8" height="16" fill="#e8d7a0" stroke="#333"/>
+  <text x="360" y="90" font-size="9" text-anchor="middle">R2 10k</text>
+  <line x1="392" y1="118" x2="418" y2="207" stroke="#c98a2c" stroke-width="3"/>
+  <text x="405" y="160" font-size="9" fill="#c98a2c" transform="rotate(70 405 160)">R3 10k (WK&#8594;GND, diagonal)</text>
+  <rect x="393" y="203" width="24" height="12" fill="#cfe8cf" stroke="#333"/>
+  <text x="405" y="245" font-size="9" text-anchor="middle">C2 100nF (VS&#8596;GND)</text>
+
+  <!-- ================= XIAO ESP32-C6 ================= -->
+  <rect x="468" y="103" width="204" height="240" fill="#fff" stroke="#333" stroke-width="1.5"/>
+  <text x="570" y="97" font-size="11" text-anchor="middle" font-weight="bold">XIAO ESP32-C6 (on female headers)</text>
+  <rect x="672" y="200" width="34" height="40" fill="#bbb" stroke="#333" stroke-width="1.5"/>
+  <text x="720" y="225" font-size="9">USB-C</text>
+  <text x="720" y="238" font-size="8.5" fill="#555">overhangs edge</text>
+
+  <g font-size="10" text-anchor="middle">
+    <text x="480" y="118">5V</text><text x="510" y="118">GND</text><text x="540" y="118">3V3</text>
+    <text x="570" y="118">D0</text><text x="600" y="118">D1</text><text x="630" y="118">D2</text><text x="660" y="118">D3</text>
   </g>
-
-  <!-- ===================== XIAO ESP32-C6 ===================== -->
-  <g>
-    <rect x="560" y="330" width="220" height="180" fill="#fff" stroke="#333" stroke-width="2"/>
-    <text x="670" y="318" font-size="13" text-anchor="middle" font-weight="bold">Seeed XIAO ESP32-C6 (on female headers)</text>
-    <!-- USB-C nub -->
-    <rect x="760" y="395" width="35" height="40" fill="#bbb" stroke="#333" stroke-width="2"/>
-    <text x="825" y="420" font-size="10">USB-C</text>
-    <text x="825" y="433" font-size="9" fill="#555">(overhangs board</text>
-    <text x="825" y="445" font-size="9" fill="#555">edge for access)</text>
-
-    <!-- top header row -->
-    <text x="590" y="345" font-size="10" text-anchor="middle">5V</text>
-    <text x="620" y="345" font-size="10" text-anchor="middle">GND</text>
-    <text x="650" y="345" font-size="10" text-anchor="middle">3V3</text>
-    <text x="680" y="345" font-size="10" text-anchor="middle">D0</text>
-    <text x="710" y="345" font-size="10" text-anchor="middle">D1</text>
-    <text x="740" y="345" font-size="10" text-anchor="middle">D2</text>
-    <text x="768" y="345" font-size="10" text-anchor="middle">D3</text>
-    <!-- bottom header row -->
-    <text x="590" y="500" font-size="10" text-anchor="middle">D10</text>
-    <text x="620" y="500" font-size="10" text-anchor="middle">D9</text>
-    <text x="650" y="500" font-size="10" text-anchor="middle">D8</text>
-    <text x="680" y="500" font-size="10" text-anchor="middle" font-weight="bold" fill="#1a6b1a">D7</text>
-    <text x="710" y="500" font-size="10" text-anchor="middle" font-weight="bold" fill="#b8860b">D6</text>
-    <text x="740" y="500" font-size="10" text-anchor="middle">D5</text>
-    <text x="768" y="500" font-size="10" text-anchor="middle">D4</text>
-    <text x="670" y="518" font-size="9" text-anchor="middle" fill="#555">D6=TX/GPIO16, D7=RX/GPIO17 &#8212; verify against silkscreen</text>
+  <g font-size="10" text-anchor="middle">
+    <text x="480" y="336">D10</text><text x="510" y="336">D9</text><text x="540" y="336">D8</text>
+    <text x="570" y="336" font-weight="bold" fill="#1a6b1a">D7</text>
+    <text x="600" y="336" font-weight="bold" fill="#b8860b">D6</text>
+    <text x="630" y="336">D5</text><text x="660" y="336">D4</text>
   </g>
+  <text x="570" y="356" font-size="8.5" fill="#555" text-anchor="middle">D7=RX/GPIO17, D6=TX/GPIO16 &#8212; wire by label, not position</text>
+  <text x="570" y="326" font-size="8" fill="#aaa" text-anchor="middle">(unused pins below/above shown greyed)</text>
 
-  <!-- ===================== Wires ===================== -->
-  <!-- 12V rail: J3 -> C1 -> U1 VS and -> U2 IN+ -->
-  <polyline points="45,285 150,285 150,300" fill="none" stroke="#c0392b" stroke-width="3"/>
-  <polyline points="150,300 328,254" fill="none" stroke="#c0392b" stroke-width="3"/>
-  <polyline points="150,285 495,285 495,200" fill="none" stroke="#c0392b" stroke-width="3"/>
+  <!-- C1 bulk cap near rails -->
+  <circle cx="105" cy="103" r="14" fill="#eee" stroke="#333" stroke-width="1.5"/>
+  <text x="105" y="106" font-size="8.5" text-anchor="middle" font-weight="bold">C1</text>
+  <text x="105" y="128" font-size="8.5" text-anchor="middle">100&#181;F</text>
 
-  <!-- GND rail: J3 -> C1 -> U1 GND -> U2 IN- -> XIAO GND -->
-  <polyline points="45,315 150,315 150,320" fill="none" stroke="#111" stroke-width="3"/>
-  <polyline points="150,320 328,330" fill="none" stroke="#111" stroke-width="3"/>
-  <polyline points="328,330 420,330 420,165 440,165" fill="none" stroke="#111" stroke-width="3"/>
-  <polyline points="420,330 420,345 620,345" fill="none" stroke="#111" stroke-width="3"/>
+  <!-- ================= Jumper wires ================= -->
+  <!-- J3 leads -->
+  <line x1="20" y1="90" x2="90" y2="90" stroke="#c0392b" stroke-width="3"/>
+  <text x="18" y="86" font-size="9" text-anchor="end" fill="#c0392b">RED 12V</text>
+  <line x1="20" y1="103" x2="120" y2="103" stroke="#c0392b" stroke-width="3" stroke-dasharray="2,2"/>
+  <line x1="20" y1="118" x2="60" y2="118" stroke="#111" stroke-width="3"/>
+  <line x1="60" y1="118" x2="60" y2="90" stroke="#111" stroke-width="3"/>
+  <line x1="60" y1="90" x2="90" y2="90" stroke="#111" stroke-width="0"/>
+  <text x="18" y="132" font-size="9" text-anchor="end" fill="#111">BLACK GND</text>
+  <line x1="20" y1="216" x2="360" y2="216" stroke="#95a5a6" stroke-width="3"/>
+  <text x="18" y="220" font-size="9" text-anchor="end" fill="#7f8c8d">WHITE LIN</text>
 
-  <!-- LIN bus: J3 -> U1 pin6 -->
-  <polyline points="45,300 210,300 210,292 230,292" fill="none" stroke="#95a5a6" stroke-width="3"/>
+  <!-- buck IN+ -> 12V rail, IN- -> GND rail, OUT- -> GND rail -->
+  <polyline points="180,118 180,90 120,90" fill="none" stroke="#c0392b" stroke-width="2.5"/>
+  <polyline points="210,118 210,80 90,80 90,90" fill="none" stroke="#111" stroke-width="2.5"/>
+  <polyline points="240,138 240,150 90,150" fill="none" stroke="#111" stroke-width="2.5" stroke-dasharray="1,0"/>
 
-  <!-- U2 OUT+ -> XIAO 5V -->
-  <polyline points="440,180 400,180 400,345 590,345" fill="none" stroke="#e67e22" stroke-width="3"/>
+  <!-- buck OUT+ -> XIAO 5V -->
+  <polyline points="270,118 270,70 480,70 480,118" fill="none" stroke="#e67e22" stroke-width="2.5"/>
 
-  <!-- U1 TxD(4) -> XIAO D6 ; U1 RxD(1) -> XIAO D7 -->
-  <polyline points="210,330 190,330 190,470 710,470 710,500" fill="none" stroke="#b8860b" stroke-width="3"/>
-  <polyline points="210,216 175,216 175,480 680,480 680,500" fill="none" stroke="#1a6b1a" stroke-width="3"/>
+  <!-- U1 RxD -> XIAO D7 ; TxD -> XIAO D6 -->
+  <polyline points="330,118 330,60 570,60 570,336" fill="none" stroke="#1a6b1a" stroke-width="2.5"/>
+  <polyline points="420,118 420,50 600,50 600,336" fill="none" stroke="#b8860b" stroke-width="2.5"/>
 
-  <!-- XIAO 3V3 -> R2 (EN pull-up) -->
-  <polyline points="650,345 650,90 192,90 192,205" fill="none" stroke="#9b59b6" stroke-width="3"/>
+  <!-- U1 VS -> 12V rail ; U1 GND(pin5) -> GND rail -->
+  <polyline points="390,216 390,260 120,260 120,150" fill="none" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="4,3"/>
+  <polyline points="420,216 420,280 90,280 90,150" fill="none" stroke="#111" stroke-width="2.5" stroke-dasharray="4,3"/>
 
-  <!-- R3 (WK) -> GND rail -->
-  <polyline points="192,314 192,330 210,330" fill="none" stroke="#111" stroke-width="2" stroke-dasharray="4,3"/>
+  <!-- R2 top leg -> XIAO 3V3 -->
+  <polyline points="360,99 360,55 540,55 540,118" fill="none" stroke="#9b59b6" stroke-width="2.5"/>
 
-  <!-- INH left NC -->
-  <text x="345" y="212" font-size="9" fill="#888">NC</text>
+  <!-- XIAO GND -> GND rail -->
+  <polyline points="510,118 510,40 90,40 90,90" fill="none" stroke="#111" stroke-width="2.5" stroke-dasharray="4,3"/>
 
-  <!-- ===================== Legend ===================== -->
-  <g transform="translate(70,590)">
-    <rect x="0" y="-14" width="760" height="60" fill="#fbfbfb" stroke="#ccc"/>
-    <line x1="15" y1="0" x2="45" y2="0" stroke="#c0392b" stroke-width="3"/><text x="50" y="4" font-size="11">12V</text>
-    <line x1="90" y1="0" x2="120" y2="0" stroke="#111" stroke-width="3"/><text x="125" y="4" font-size="11">GND</text>
-    <line x1="170" y1="0" x2="200" y2="0" stroke="#95a5a6" stroke-width="3"/><text x="205" y="4" font-size="11">LIN bus</text>
-    <line x1="270" y1="0" x2="300" y2="0" stroke="#e67e22" stroke-width="3"/><text x="305" y="4" font-size="11">5V (buck out)</text>
-    <line x1="400" y1="0" x2="430" y2="0" stroke="#b8860b" stroke-width="3"/><text x="435" y="4" font-size="11">TxD&#8594;D6</text>
-    <line x1="500" y1="0" x2="530" y2="0" stroke="#1a6b1a" stroke-width="3"/><text x="535" y="4" font-size="11">RxD&#8592;D7</text>
-    <line x1="605" y1="0" x2="635" y2="0" stroke="#9b59b6" stroke-width="3"/><text x="640" y="4" font-size="11">3V3&#8594;EN</text>
-    <text x="15" y="26" font-size="10" fill="#666">Point-to-point hookup wire on perfboard &#8212; run each colour as a labelled bus strip, not necessarily this exact path.</text>
+  <!-- Legend -->
+  <g transform="translate(20,700)">
+    <rect x="-5" y="-16" width="810" height="56" fill="#fbfbfb" stroke="#ccc"/>
+    <line x1="10" y1="0" x2="40" y2="0" stroke="#c0392b" stroke-width="3"/><text x="45" y="4" font-size="10.5">12V</text>
+    <line x1="90" y1="0" x2="120" y2="0" stroke="#111" stroke-width="3"/><text x="125" y="4" font-size="10.5">GND</text>
+    <line x1="175" y1="0" x2="205" y2="0" stroke="#95a5a6" stroke-width="3"/><text x="210" y="4" font-size="10.5">LIN bus</text>
+    <line x1="280" y1="0" x2="310" y2="0" stroke="#e67e22" stroke-width="3"/><text x="315" y="4" font-size="10.5">5V (buck out)</text>
+    <line x1="430" y1="0" x2="460" y2="0" stroke="#b8860b" stroke-width="3"/><text x="465" y="4" font-size="10.5">TxD&#8594;D6</text>
+    <line x1="540" y1="0" x2="570" y2="0" stroke="#1a6b1a" stroke-width="3"/><text x="575" y="4" font-size="10.5">RxD&#8592;D7</text>
+    <line x1="650" y1="0" x2="680" y2="0" stroke="#9b59b6" stroke-width="3"/><text x="685" y="4" font-size="10.5">3V3&#8594;EN</text>
+    <text x="10" y="24" font-size="9.5" fill="#666">Dashed lines = wires that cross other columns without touching them (insulated hookup wire, only soldered at both ends).</text>
+    <text x="10" y="37" font-size="9.5" fill="#666">Solid short segments at ICs = component leads bridging directly between two adjacent holes (R3, C2).</text>
   </g>
 </svg>
