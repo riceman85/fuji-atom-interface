@@ -112,6 +112,9 @@ enable to 3.3V.
 
 ### Phase 1 — protoboard (~AU$45), this IS a valid finished product
 
+Placement map, verified TLE7259-3GE pinout, and point-to-point wire list:
+[`docs/phase1-protoboard-layout.md`](docs/phase1-protoboard-layout.md).
+
 | Item | Qty | Source | ~AUD |
 |---|---|---|---|
 | Seeed XIAO ESP32-C6 | 1 | Core Electronics | 14 |
